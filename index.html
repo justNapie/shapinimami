@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopMart — Discover More, Pay Less</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar-shopmart" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a href="#" class="brand">Shop<span>Mart</span></a>
+    <div class="search-wrap">
+      <input type="search" placeholder="Search for products, brands..." aria-label="Search products" />
+      <button class="search-btn" aria-label="Search"><i class="bi bi-search"></i></button>
+    </div>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart" aria-haspopup="dialog">
+        <i class="bi bi-bag-fill"></i>
+        <span class="cart-label">Cart</span>
+        <span class="cart-badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-label="Hero promotional banner">
+  <div class="container-xl">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="hero-content">
+          <span class="hero-tag">✦ New Arrivals 2025</span>
+          <h1>Discover More,<em>Pay Less.</em></h1>
+          <p>Shop thousands of products — from electronics to fashion — with unbeatable deals delivered straight to your door.</p>
+          <a href="#products" class="btn-hero">
+            <i class="bi bi-bag-heart-fill"></i> Shop Now
+          </a>
+          <div class="hero-stats">
+            <div class="hero-stat"><div class="num">50K+</div><div class="lbl">Products</div></div>
+            <div class="hero-stat"><div class="num">2M+</div><div class="lbl">Happy Buyers</div></div>
+            <div class="hero-stat"><div class="num">4.9★</div><div class="lbl">Avg Rating</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <div class="hcard hcard-back1">
+              <div class="hcard-img">📱</div>
+              <div class="hcard-name">iPhone 16 Pro</div>
+              <div class="hcard-price">₱68,990</div>
+            </div>
+            <div class="hcard hcard-back2">
+              <div class="hcard-img">👟</div>
+              <div class="hcard-name">Air Max Sneakers</div>
+              <div class="hcard-price">₱4,200</div>
+            </div>
+            <div class="hcard hcard-main">
+              <div class="hcard-img">💻</div>
+              <div class="hcard-name">MacBook Air M3</div>
+              <div class="hcard-price">₱79,990</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY STRIP -->
+<div class="category-strip" role="navigation" aria-label="Product categories">
+  <div class="cat-list">
+    <button class="cat-chip active">🏷️ All</button>
+    <button class="cat-chip">📱 Electronics</button>
+    <button class="cat-chip">👗 Fashion</button>
+    <button class="cat-chip">🏠 Home & Living</button>
+    <button class="cat-chip">💄 Beauty</button>
+    <button class="cat-chip">🎮 Gaming</button>
+    <button class="cat-chip">🍳 Kitchen</button>
+    <button class="cat-chip">🧸 Toys</button>
+    <button class="cat-chip">📚 Books</button>
+    <button class="cat-chip">🏋️ Sports</button>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products" aria-label="Featured products">
+  <div class="container-xl py-5" style="padding-top: 70px !important; padding-bottom: 70px !important;">
+    <div class="row mb-4 fade-in">
+      <div class="col">
+        <div class="section-label">Featured Products</div>
+        <p class="section-sub">Handpicked deals just for you — updated daily</p>
+      </div>
+    </div>
+    <div class="row g-3" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- PROMO BANNERS -->
+<section class="promo-section" aria-label="Promotional banners">
+  <div class="container-xl">
+    <div class="row g-3">
+      <div class="col-md-6 fade-in">
+        <div class="promo-card promo-card-1">
+          <div>
+            <div class="promo-label" style="color:white;">Flash Sale<br>Up to 70% OFF</div>
+            <p class="promo-sub">Electronics, gadgets & more. Today only!</p>
+            <a href="#products" class="btn-promo btn-promo-light">Grab Deals</a>
+          </div>
+          <div style="font-size:5rem; position:relative; z-index:2;">⚡</div>
+        </div>
+      </div>
+      <div class="col-md-6 fade-in">
+        <div class="promo-card promo-card-2">
+          <div>
+            <div class="promo-label">Free Shipping<br>Over ₱999</div>
+            <p class="promo-sub" style="color: var(--mid);">No promo code needed. Just add to cart!</p>
+            <a href="#products" class="btn-promo btn-promo-dark">Shop Now</a>
+          </div>
+          <div style="font-size:5rem; position:relative; z-index:2;">🚀</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES STRIP -->
+<section style="background: var(--white); padding: 50px 0; border-top: 1.5px solid var(--border); border-bottom: 1.5px solid var(--border);" aria-label="Features">
+  <div class="container-xl">
+    <div class="row g-4 text-center">
+      <div class="col-6 col-md-3 fade-in">
+        <div style="font-size:2rem; margin-bottom:8px;">🚚</div>
+        <div style="font-family:var(--font-display); font-weight:700; font-size:0.9rem; margin-bottom:4px;">Free Delivery</div>
+        <div style="font-size:0.8rem; color:var(--muted);">On orders over ₱999</div>
+      </div>
+      <div class="col-6 col-md-3 fade-in">
+        <div style="font-size:2rem; margin-bottom:8px;">🔄</div>
+        <div style="font-family:var(--font-display); font-weight:700; font-size:0.9rem; margin-bottom:4px;">Easy Returns</div>
+        <div style="font-size:0.8rem; color:var(--muted);">30-day return policy</div>
+      </div>
+      <div class="col-6 col-md-3 fade-in">
+        <div style="font-size:2rem; margin-bottom:8px;">🔒</div>
+        <div style="font-family:var(--font-display); font-weight:700; font-size:0.9rem; margin-bottom:4px;">Secure Payment</div>
+        <div style="font-size:0.8rem; color:var(--muted);">100% protected</div>
+      </div>
+      <div class="col-6 col-md-3 fade-in">
+        <div style="font-size:2rem; margin-bottom:8px;">💬</div>
+        <div style="font-family:var(--font-display); font-weight:700; font-size:0.9rem; margin-bottom:4px;">24/7 Support</div>
+        <div style="font-size:0.8rem; color:var(--muted);">Always here to help</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer aria-label="Footer">
+  <div class="container-xl">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-brand">Shop<span>Mart</span></div>
+        <p class="footer-tagline">Your everyday marketplace — everything you need, at the best prices.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <div class="footer-head">Shop</div>
+        <ul class="footer-links">
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> New Arrivals</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Best Sellers</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Flash Deals</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Electronics</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Fashion</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Home & Living</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <div class="footer-head">Help</div>
+        <ul class="footer-links">
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> FAQs</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Track Order</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Returns & Refunds</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Shipping Info</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> My Account</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Report Issue</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <div class="footer-head">Company</div>
+        <ul class="footer-links">
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> About Us</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Careers</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Press</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Privacy Policy</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Terms of Service</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right" style="font-size:0.7rem;"></i> Sell on ShopMart</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-6">
+        <div class="footer-head">Contact</div>
+        <div class="footer-contact">
+          <p><i class="bi bi-geo-alt-fill"></i> Unit 12, Tech Tower, BGC, Taguig City, Metro Manila</p>
+          <p><i class="bi bi-telephone-fill"></i> +63 2 8888 7777</p>
+          <p><i class="bi bi-envelope-fill"></i> support@shopmart.ph</p>
+          <p><i class="bi bi-clock-fill"></i> Mon–Sat, 9AM–9PM</p>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <div>© 2025 ShopMart. All rights reserved.</div>
+      <div class="footer-pay">
+        <span style="font-size:0.78rem; color:rgba(255,255,255,0.3);">We accept:</span>
+        <span class="pay-chip">GCash</span>
+        <span class="pay-chip">Maya</span>
+        <span class="pay-chip">Visa</span>
+        <span class="pay-chip">COD</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-label="Shopping cart">
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-head">
+      <div class="cart-title"><i class="bi bi-bag-fill me-2" style="color:var(--primary);"></i>My Cart</div>
+      <button class="cart-close" id="cartClose" aria-label="Close cart"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="bi bi-bag-x"></i>
+        <p>Your cart is empty.<br/>Start shopping and add items!</p>
+      </div>
+      <div id="cartItems"></div>
+    </div>
+    <div class="cart-foot" id="cartFoot" style="display:none;">
+      <div class="summary-row"><span>Items (<span id="sumItems">0</span>)</span><span id="sumSubtotal">₱0.00</span></div>
+      <div class="summary-row"><span>Shipping</span><span id="sumShipping">₱0.00</span></div>
+      <div class="summary-row total"><span>Grand Total</span><span id="sumTotal">₱0.00</span></div>
+      <button class="btn-checkout" id="checkoutBtn">
+        <i class="bi bi-credit-card-fill"></i> Proceed to Checkout
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container-custom" id="toastContainer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
